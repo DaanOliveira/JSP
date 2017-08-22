@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script>
+            function L(){
+                document.frm.txtHR.value = "";
+                document.frm.txtVHR.value = "";
+                document.frm.txtAumento.value = "";
+                document.frm.txtBruto.value = "";
+            } 
+            
+            function C(){
+                var hr, vhr, aum, bruto;
+                hr = document.frm.txtHR.value;
+                vhr = document.frm.txtVHR.value;
+                aum = document.frm.txtAumento.value;
+                
+                bruto = vhr*hr;
+                //alert("Bruto: "+bruto);
+                document.frm.txtBruto.value = bruto;
+                
+                if (bruto <= 500)
+                    aum = 0.15;
+                else if (bruto <=1000)
+                    aum = 0.1;
+                else aum = 0.05;
+                //alert ("aum: "+aum);
+                var aumentoF = aum * bruto;
+                //alert ("aumentoF: "+aumentoF);
+                var salarioF = bruto + aumentoF;
+                //alert ("salarioF: "+salarioF);
+                
+                document.frm.txtBruto.value = salarioF;
+                document.frm.txtAumento.value = aumentoF;
+                
+            }
+        </script>
+        <title>Salário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name = "frm">
+            <table>
+                <tr>
+                    <td> Horas Trabalhadas: <input type = "text" name = "txtHR" size = "5"> </td>
+                    <td> Valor Hora: <input type = "text" name = "txtVHR" size = "5"> </td>
+                    <td> Aumento: <input type = "text" name = "txtAumento" size = "5"> </td>
+                    <td> Salário Bruto: <input type = "text" name = "txtBruto" size = "5"> </td>
+                </tr>
+                                              
+            </table>
+            <input type = "button" value = "Calcular" onclick= "C()">
+            <input type = "button" value = "Limpar" onclick= "L()">
+            
+        </form>
+    </body>
+</html>

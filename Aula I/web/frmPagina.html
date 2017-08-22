@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function S(){
+                var n1, n2, r;
+                n1 = parseInt (document.frm.txtn1.value);
+                n2 = parseInt (document.frm.txtn2.value);
+                //alert("test");
+                r = n1+n2;
+                document.frm.txtr.value = r;                
+            }
+            function L(){
+                document.frm.txtn1.value = "";
+                document.frm.txtn2.value = "";
+                document.frm.txtr.value = "";
+            }
+            function SU(){
+                var n1, n2, r;
+                n1 = parseInt (document.frm.txtn1.value);
+                n2 = parseInt (document.frm.txtn2.value);
+                r = n1-n2;
+                document.frm.txtr.value = r;
+            }
+            function M(){
+                var n1, n2, r;
+                n1 = parseInt (document.frm.txtn1.value);
+                n2 = parseInt (document.frm.txtn2.value);
+                r = n1*n2;
+                document.frm.txtr.value = r;
+            }
+            function D(){
+                var n1, n2, r;
+                n1 = parseInt (document.frm.txtn1.value);
+                n2 = parseInt (document.frm.txtn2.value);
+                r = n1/n2;
+                document.frm.txtr.value = r;
+            }
+        </script>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name ="frm">
+                    <pre> 
+            Num1:   <input type = "text" name = "txtn1" size = "3">
+            Num2:   <input type = "text" name = "txtn2" size = "3">
+            Result: <input type = "text" name = "txtr" size = "3">
+                    <input type = "button" value = "Somar" onclick= "S()">
+                    <input type ="button" value = "Subtração" onclick="SU()">
+                    <input type ="button" value = "Multiplicação" onclick ="M()">
+                    <input type = "button" value = "Divisão" onclick = "D()">    
+                    <input type= "button" value = "Limpar" onclick= "L()">
+                    
+                    </pre>
+            
+        </form>
+    </body>
+</html>
