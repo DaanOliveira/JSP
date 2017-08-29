@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script>
+            function L(){
+                document.frm.txtA.value = "";
+                document.frm.txtB.value = "";
+                document.frm.txtX.value = "";
+                document.frm.txtTotal.value = "";
+            }
+            function C(){
+                var a, b, x, total;
+                a = parseInt (document.frm.txtA.value);
+                b = parseInt (document.frm.txtB.value);
+                x = parseInt (document.frm.txtX.value);
+                
+                if (x >= 10){
+                    total = a+b;
+                }
+                else total = a-b;
+                
+                document.frm.txtTotal.value = total;
+            }
+        </script>
+        <title>Valor de X</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name = "frm">
+            <table>
+                <tr>
+                    <td> A: <input type = "text" name = "txtA" size = "3"> </td>
+                    <td> B: <input type = "text" name = "txtB" size = "3"> </td>
+                    <td> X: <input type = "text" name = "txtX" size = "3"> </td>
+                    <td> C: <input type = "text" name = "txtTotal" size = "3"> </td>
+                </tr>
+                               
+            </table>
+            <input type = "button" value = "Calcular" onclick = "C()">
+            <input type = "button" value = "Limpar" onclick = "L()">
+            
+            
+        </form>
+    </body>
+</html>

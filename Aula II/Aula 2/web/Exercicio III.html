@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+    function W(){ 
+       var num1, num2, k, maior, menor, totalImpar = 0, totalPar = 0;
+       num1 = parseInt (document.frm.num1.value);
+       num2 = parseInt (document.frm.num2.value);
+       
+       if (num1<num2){
+           menor = num1;
+           maior = num2;
+       }
+       else if (num1>num2){
+           menor = num2;
+           maior = num1;
+       }
+       for (k=menor; k<=maior; k++){
+           if (k%2==0)
+               totalPar += k;
+           else 
+               totalImpar += k;
+       }
+       document.write("Total Pares: "+totalPar+"<br>Total Impares: "+totalImpar);
+        
+    }
+    </script>
+        <title>Soma</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="frm">
+            <br>
+            <br>
+            Numero 1: <input type = "text" name = "num1" size = "3">
+            Numero 2: <input type = "text" name = "num2" size = "3">  
+                     <input type="button" name="cmdFor" value="Gerar!"   onclick="W()">
+        </form>
+    </body>
+</html>

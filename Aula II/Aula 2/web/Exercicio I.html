@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+    function W(){ 
+       var num;
+       num = parseInt(document.frm.num1.value);
+       var ini;
+            for (ini=1; ini <= num; ini++){
+                
+                if (ini %2 !== 0)
+                document.write ('<p>O Resultado é: ' + ini + '</p>');
+            }  
+    } 
+    </script>
+        <title>Números Impares</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="frm">
+            <br>
+            <br>
+            Numero: <input type = "text" name = "num1" size = "3">
+                    <input type="button" name="cmdFor" value="Gerar!"   onclick="W()">
+        </form>
+    </body>
+</html>
